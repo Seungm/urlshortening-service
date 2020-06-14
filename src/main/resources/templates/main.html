@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>URL Shortening</title>
+    <link href="/css/style.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div>
+    <label>URL (변경전 , 변경후 전체)
+        <input name="innerUrl" placeholder="URL을 입력해 주세요." type="text"/>
+        <button id="shortenButton" type="button">OK</button>
+    </label>
+    <div style="margin-top: 20px;">
+        <div class="result" id="result" style="display: none;">
+            <div>
+                <span> 입력한 URL : </span><span id="oriUrl"></span>
+            </div>
+            <div>
+                <span> 변경된 URL : </span><span id="shortUrl"></span>
+            </div>
+        </div>
+        <div id="error" style="display: none;"></div>
+    </div>
+</div>
+</body>
+<script src="/lib/jquery/dist/jquery.min.js" type="text/javascript"></script>
+<script src="/js/shorten.js" type="text/javascript"></script>
+</html>

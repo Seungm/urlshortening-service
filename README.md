@@ -14,6 +14,6 @@ URL을 입력받아 짧게 줄여주고, Shortening된 URL을 입력하면 원�
     * 같은 URL에 대한 동일한 key Character 값 제공 
 
 # 실행 방법 명시
-- clone : github.com/
+- clone : https://github.com/Seungm/urlshortening-service.git or download
 - mvn package
 - java -jar urlshorten-0.0.1-SNAPSHOT.jar
