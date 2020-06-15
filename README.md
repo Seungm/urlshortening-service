@@ -14,42 +14,12 @@ URL을 입력받아 짧게 줄여주고, Shortening된 URL을 입력하면 원�
     * 같은 URL에 대한 동일한 key Character 값 제공 
 
 # 실행 방법 명시
-
 ## 환경
 * Java8
 * Maven
 * Spring Boot
 * Github
---
-## 프로젝트 빌드 및 실행
-1) 소스 받기
-```$xslt
-# cloansource form Github
-* git clone https://github.com/Seungm/urlshortening-service.git
-    * OR Download
-```
-2) 소스 빌드
-```$xslt
-# move
-cd urlshorten
-
-# build
-mvn package
-```
-
-3) 실행
-```$xslt
-cd target
-
-#run 
-java -jar urlshorten-0.0.1-SNAPSHOT.jar
-```
-
-## 환경
-* Java8
-* Maven
-* Spring Boot
-* Github
+* H2Database
 --
 ## 프로젝트 빌드 및 실행
 1) 소스 받기
