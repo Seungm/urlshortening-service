@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
 import javax.servlet.http.HttpServletResponse;
+import java.util.Optional;
 
 @Controller
 @RequiredArgsConstructor
@@ -24,7 +25,8 @@ public class UrlShortenController {
     @GetMapping("/{shortenUrl}")
     public String redirect(HttpServletResponse response, @PathVariable String shortenUrl){
         shortenUrl = "http://codetest.smk/"+shortenUrl;
-        Url url = urlService.redirectUrl(shortenUrl);
-        return "redirect:"+url.getOriginalUrl();
+        Optional<Url> url1 = urlService.redirectUrl(shortenUrl);
+        return url1.map(url -> "redirect:" + url.getOriginalUrl()).orElse("error/error");
+
     }
 }

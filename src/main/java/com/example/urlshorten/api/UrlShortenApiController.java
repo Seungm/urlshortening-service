@@ -8,6 +8,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Optional;
+
 @RestController
 @RequestMapping("/api")
 @RequiredArgsConstructor
@@ -24,8 +26,8 @@ public class UrlShortenApiController {
 
     @PostMapping("/redirect")
     public ResponseEntity<String> redirect(@RequestParam String shortenUrl){
-        Url url = urlService.redirectUrl(shortenUrl);
-        return new ResponseEntity<>(url.getOriginalUrl(), HttpStatus.OK);
+        Optional<Url> url = urlService.redirectUrl(shortenUrl);
+        return new ResponseEntity<>(url.get().getOriginalUrl(), HttpStatus.OK);
     }
 
 }

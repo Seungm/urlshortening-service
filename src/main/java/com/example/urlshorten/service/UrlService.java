@@ -45,8 +45,7 @@ public class UrlService {
         return false;
     }
 
-    public Url redirectUrl(String shortenUrl) {
-        return urlRepository.findByShortenUrl(shortenUrl)
-                .orElseThrow(() -> new UrlException("'" + shortenUrl + "'은 등록되지 않은 SHORTEN URL 타입입니다."));
+    public Optional<Url> redirectUrl(String shortenUrl) {
+        return urlRepository.findByShortenUrl(shortenUrl);
     }
 }

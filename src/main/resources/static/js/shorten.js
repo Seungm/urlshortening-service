@@ -11,7 +11,6 @@ function fn_redirect(innerUrl) {
             window.location.href = data;
         },
         error: function (data) {
-            console.log(data);
             $error.show();
             $error.html("등록되지 않은 SHORTEN URL 타입입니다.");
         }
